@@ -1,4 +1,4 @@
-# MICORA
+
 # MICORA
 
 A community platform designed to help people share real-world problems, validate problems they experience, discuss possible solutions, and connect with developers interested in solving them.
