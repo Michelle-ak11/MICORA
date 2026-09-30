@@ -25,7 +25,7 @@ function Login() {
           maxLength={16}
           required
         />
-        <input type="username" placeholder="Username" required />
+     
 
         <label>
           <input
