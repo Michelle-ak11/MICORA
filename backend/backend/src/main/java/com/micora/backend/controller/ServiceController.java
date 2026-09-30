@@ -15,7 +15,7 @@ public class ServiceController {
 
     public ServiceController(ServiceRepo serviceRepository) {
         this.serviceRepository = serviceRepository;
-    }
+    } //this is a test
 
     @GetMapping
     public List<Service> getAllServices() {
