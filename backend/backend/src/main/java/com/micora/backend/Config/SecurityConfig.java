@@ -19,8 +19,8 @@ public class SecurityConfig {
             http
                 .csrf(crsf -> crsf.disable()) //Cross-Site Request Forgery protection is disabled for simplicity
                 .authorizeHttpRequests(auth -> auth
-                    .requestMatchers("/api/services/**", "/api/auth/**").permitAll() //makes any url starting w api/service publicly accessible
-                    .anyRequest().authenticated() //all other requests require authentication
+                    .requestMatchers("/api/auth/**", "/api/services/**", "/error").permitAll() // Allow unauthenticated access to authentication endpoints
+                    .anyRequest().authenticated() // All other requests require authentication
                 );
 
             return http.build();
