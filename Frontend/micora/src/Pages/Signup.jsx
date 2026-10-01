@@ -6,16 +6,11 @@ function Signup() {
   return (
     <div>
       <h1>Create your MICORA account</h1>
+  
 
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          window.location.href = "/dashboard";
-        }}
-      >
-        <input
-          type="text"
-          placeholder="Full Name"
+      <form onSubmit={(e) => {  e.preventDefault();
+          window.location.href = "/dashboard"; }} >
+        <input type="text" placeholder="Full Name"
           required
         />
 

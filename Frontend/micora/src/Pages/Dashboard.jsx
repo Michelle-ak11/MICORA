@@ -8,13 +8,11 @@ function Dashboard() {
         <p>Printing Hub</p>
       </div>
 
-      <nav>
-        <a href="/dashboard">Dashboard</a>
-        <a href="/services">Services</a>
-        <a href="/orders">Orders</a>
-        <a href="/profile">Profile</a>
-    
-      </nav>
+      <div className="user">
+
+      </div>
+
+      
 
       <a href="/logout">
         <button>Logout</button>
@@ -36,7 +34,7 @@ function Dashboard() {
       
         </section>
 
-        {/* Recent Order */}
+        {/* Recent Order */}  
         <section>
           <h2>Recent Order</h2>
 
