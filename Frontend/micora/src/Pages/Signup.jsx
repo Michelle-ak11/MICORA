@@ -1,51 +1,66 @@
 import { useState } from "react";
-
+import "./signup.css"; // create this file
 
 function Signup() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div>
-      <h1>Create your MICORA account</h1>
-  
+    <div className="signup-page">
+      <div className="signup-card">
+        <h1>Create your MICORA account</h1>
+        <p className="subtitle">Join us and get started in seconds</p>
 
-      <form  class="auth-form" onSubmit={(e) => {  e.preventDefault();
-          window.location.href = "/dashboard"; }} >
-        <input type="text" placeholder="Full Name"
-          required
-        />
+        <form
+          className="auth-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+            window.location.href = "/dashboard";
+          }}
+        >
+          <div className="input-group">
+            <input
+              type="text"
+              placeholder="Full Name"
+              required
+            />
+          </div>
 
-        <input
-          type="email"
-          placeholder="Email Address"
-          required
-        />
+          <div className="input-group">
+            <input
+              type="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
 
-        <input
-          type={showPassword ? "text" : "password"}
-          placeholder="Password"
-          maxLength={16}
-          required
-        />
+          <div className="input-group">
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Password"
+              maxLength={16}
+              required
+            />
+          </div>
 
-        <label>
-          <input
-            type="checkbox"
-            checked={showPassword}
-            onChange={() => setShowPassword(!showPassword)}
-          />
-          Show Password
-        </label>
+          <label className="show-password">
+            <input
+              type="checkbox"
+              checked={showPassword}
+              onChange={() => setShowPassword(!showPassword)}
+            />
+            Show Password
+          </label>
 
-        <button type="submit">
-          Create Account
-        </button>
-      </form>
+          <button type="submit" className="signup-btn">
+            Create Account
+          </button>
+        </form>
 
-      <p>
-        Already have an account?{" "}
-        <a href="/login">Login</a>
-      </p>
+        <p className="login-text">
+          Already have an account?{" "}
+          <a href="/login">Login</a>
+        </p>
+      </div>
     </div>
   );
 }
