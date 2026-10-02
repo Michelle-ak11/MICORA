@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 function Signup() {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -8,7 +9,7 @@ function Signup() {
       <h1>Create your MICORA account</h1>
   
 
-      <form onSubmit={(e) => {  e.preventDefault();
+      <form  class="auth-form" onSubmit={(e) => {  e.preventDefault();
           window.location.href = "/dashboard"; }} >
         <input type="text" placeholder="Full Name"
           required
